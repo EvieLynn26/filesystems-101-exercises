@@ -61,7 +61,7 @@ void ps(void)
 
 			char *argv_buf[BUFF_SIZE];
     		size_t argv_sizes[BUFF_SIZE];
-    		for (int j = 0; j < BUFF_SIZE; ++j) {
+    		for (size_t j = 0; j < BUFF_SIZE; ++j) {
 				argv_buf[j] = (char*) malloc(BUFF_SIZE * sizeof(char));
 				argv_sizes[j] = BUFF_SIZE * sizeof(char);
     		}
