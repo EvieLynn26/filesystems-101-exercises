@@ -81,6 +81,12 @@ void ps(void)
 			file = fopen(tmp_path_environ, "r");
 			if (file == NULL) {
 				report_error(tmp_path_environ, errno);
+
+				for (size_t j = 0; j < BUFF_SIZE; ++j) {
+        		free(argv_buf[j]);
+        		//free(envp_buf[j]);
+    			}
+
 				continue;	
 			}
 
